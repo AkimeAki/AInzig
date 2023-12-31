@@ -1,0 +1,38 @@
+{
+	"name": "aki-portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"engines": {
+		"node": "18.18.0",
+		"npm": "9.8.0"
+	},
+	"scripts": {
+		"dev": "astro dev --host",
+		"build": "astro build",
+		"preview": "astro preview --host",
+		"astro": "astro",
+		"lint": "eslint \"./src/**/*.{ts,tsx,astro}\"",
+		"lint:fix": "npm run lint -- --fix && prettier --write \"./**/*.{ts,tsx,astro,js,jsx,json,html,css,yaml}\""
+	},
+	"dependencies": {
+		"@astrojs/react": "^3.0.7",
+		"@astrojs/sitemap": "^3.0.3",
+		"@emotion/react": "^11.11.1",
+		"@types/react": "^18.2.45",
+		"@types/react-dom": "^18.2.17",
+		"astro": "^4.0.4",
+		"microcms-js-sdk": "^2.7.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.20.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "^6.14.0",
+		"eslint": "^8.55.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-standard-with-typescript": "^42.0.0",
+		"eslint-plugin-astro": "^0.30.0",
+		"prettier": "^3.1.1",
+		"prettier-plugin-astro": "^0.12.2"
+	}
+}

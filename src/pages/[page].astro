@@ -1,0 +1,26 @@
+---
+import Page from "@/components/Page.astro";
+import { pageData } from "@/libs/page";
+
+interface pathType {
+	params: {
+		page: string;
+	};
+}
+
+export const getStaticPaths = async (): Promise<pathType[]> => {
+	return Object.keys(pageData)
+		.map((key) => {
+			return {
+				params: {
+					page: key
+				}
+			};
+		})
+		.filter((item) => {
+			return item.params.page !== "index" && item.params.page !== "404";
+		});
+};
+---
+
+<Page />
